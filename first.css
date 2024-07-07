@@ -1,0 +1,107 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #170404;
+}
+
+.navbar {
+    background-color: #09305d;
+}
+
+.navbar-brand, .nav-link {
+    color: #fff !important;
+}
+
+.hero {
+    background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+    color: rgb(0, 0, 0);
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(93, 201, 136, 0.5);
+}
+
+.hero .content {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+.section-title {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section {
+    padding: 60px;
+    margin: 20px 0;
+}
+
+.project-card {
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #fff;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #040e18;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+/* Background Colors for Sections */
+#about, #skills, #projects, #education, #internships, #certifications, #extracurricular, #contact {
+    background-color: rgba(93, 201, 136, 0.5);
+}
+
+/* Padding and Margin for Sections */
+.section {
+    padding: 60px;
+    margin: 20px 0;
+}
+
+/* Hover Effects for Cards and Links */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgb(9, 23, 32);
+}
+
+.card-body h5:hover {
+    color: #9e3abc;
+}
+
+.social-icons a:hover {
+    color: #9e3abc;
+}

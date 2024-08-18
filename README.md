@@ -39,12 +39,3 @@ To view the website, open the index.html file in your preferred web browser.
 
 Contributions are welcome! If you have any suggestions or improvements, feel free to create an issue or submit a pull request.
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-```css
-
-Feel free to customize this `README.md` to better fit your specific portfolio website. If you need to add more details or sections, you can easily expand it.
-
-

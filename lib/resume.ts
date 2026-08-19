@@ -177,9 +177,21 @@ export const skills = [
  * `context` = what the product does (taken from the public product pages).
  * `contribution` = his part. Keep those two separate — it is what keeps the claim honest.
  */
-export const personalProjects = [
+/** Explicitly typed so an absent `url` or `repo` can never break the build again. */
+export type SideProject = {
+  name: string;
+  tagline: string;
+  context: string;
+  contribution: string;
+  stack: readonly string[];
+  live: boolean;
+  url?: string;
+  repo?: string;
+};
+
+export const personalProjects: readonly SideProject[] = [
   {
-    name: "Cloud",
+    name: "NevTan Cloud",
     tagline: "Repo-connected deployment platform",
     context:
       "A cloud deployment platform: connect a GitHub, GitLab or Bitbucket repository and ship straight to production. Handles separate dev, staging and production environments, real-time build and runtime logs, health checks, and autoscaling — so product teams deploy without managing infrastructure themselves.",
@@ -187,10 +199,10 @@ export const personalProjects = [
       "Backend engineering in Java and Spring Boot — the services and REST APIs behind repository connection, deployment orchestration and environment management.",
     stack: ["Java", "Spring Boot", "REST APIs"],
     live: true,
-    repo: "",
+    url: "https://www.nevtan.com/",
   },
   {
-    name: "Mail",
+    name: "NevTan Mail",
     tagline: "Business email on your own domain",
     context:
       "A business email service running on customer-owned domains: mailbox provisioning under central admin control, spam filtering, encryption in transit and account protection, with calendar and contacts alongside mail in one workspace.",
@@ -198,9 +210,9 @@ export const personalProjects = [
       "Backend engineering in Java and Spring Boot — mailbox provisioning, domain and account management, and the REST APIs the admin surface runs on.",
     stack: ["Java", "Spring Boot", "REST APIs", "SMTP"],
     live: true,
-    repo: "",
+    url: "https://www.nevtan.com/",
   },
-] as const;
+]
 
 export const earlierProjects = [
   {

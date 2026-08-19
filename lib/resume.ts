@@ -191,7 +191,7 @@ export type SideProject = {
 
 export const personalProjects: readonly SideProject[] = [
   {
-    name: "NevTan Cloud",
+    name: "Cloud",
     tagline: "Repo-connected deployment platform",
     context:
       "A cloud deployment platform: connect a GitHub, GitLab or Bitbucket repository and ship straight to production. Handles separate dev, staging and production environments, real-time build and runtime logs, health checks, and autoscaling — so product teams deploy without managing infrastructure themselves.",
@@ -202,7 +202,7 @@ export const personalProjects: readonly SideProject[] = [
     url: "https://www.nevtan.com/",
   },
   {
-    name: "NevTan Mail",
+    name: "Mail",
     tagline: "Business email on your own domain",
     context:
       "A business email service running on customer-owned domains: mailbox provisioning under central admin control, spam filtering, encryption in transit and account protection, with calendar and contacts alongside mail in one workspace.",

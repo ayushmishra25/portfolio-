@@ -3,7 +3,7 @@
 Personal portfolio site. **Next.js 16 (App Router) · TypeScript · Tailwind CSS v4.**
 Statically exported, so it runs on any host — no Node process needed in production.
 
-**Live:** _add your Nevtan Cloud URL here_
+**Live:** <https://next-portfolio-6a85648e.apps.nevtan.com/>
 
 ---
 

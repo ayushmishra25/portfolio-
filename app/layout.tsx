@@ -7,6 +7,8 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(profile.site),
+  alternates: { canonical: "/" },
   title: `${profile.name} — ${profile.title} | Java, Spring Boot, OTT Backend`,
   description: profile.summary,
   authors: [{ name: profile.name, url: contact.github }],
@@ -19,6 +21,8 @@ export const metadata: Metadata = {
     title: `${profile.name} — ${profile.title}`,
     description: profile.lede,
     type: "website",
+    url: profile.site,
+    siteName: `${profile.name} — Portfolio`,
   },
 };
 

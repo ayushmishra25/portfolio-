@@ -21,6 +21,7 @@ export const profile = {
   // then re-add the button in app/page.tsx (hero CTA + footer).
   resumeFile: "/Ayush_Mishra_Resume.pdf",
   photo: "/ayush.png",
+  site: "https://next-portfolio-6a85648e.apps.nevtan.com",
   status: "Open to opportunities",
 } as const;
 
@@ -199,7 +200,6 @@ export const personalProjects: readonly SideProject[] = [
       "Backend engineering in Java and Spring Boot — the services and REST APIs behind repository connection, deployment orchestration and environment management.",
     stack: ["Java", "Spring Boot", "REST APIs"],
     live: true,
-    url: "https://www.nevtan.com/",
   },
   {
     name: "Mail",
@@ -210,7 +210,6 @@ export const personalProjects: readonly SideProject[] = [
       "Backend engineering in Java and Spring Boot — mailbox provisioning, domain and account management, and the REST APIs the admin surface runs on.",
     stack: ["Java", "Spring Boot", "REST APIs", "SMTP"],
     live: true,
-    url: "https://www.nevtan.com/",
   },
 ]
 

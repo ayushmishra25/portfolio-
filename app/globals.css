@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+/* ---------- design tokens ---------- */
+:root{
+  --bg:#f7f8fa; --surface:#ffffff; --surface-2:#f1f3f7;
+  --ink:#151a21; --ink-2:#454f5d; --ink-3:#78828f;
+  --line:#e2e6ec;
+  --accent:#12608f; --accent-2:#0a3f61; --accent-soft:#e8f2f9;
+  --live:#0d7a4f; --live-soft:#e3f5ec;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0e1116; --surface:#161b22; --surface-2:#1c222b;
+    --ink:#e8ecf1; --ink-2:#aab4c0; --ink-3:#7d8794;
+    --line:#262d37;
+    --accent:#5cb3e6; --accent-2:#8fd0f5; --accent-soft:#13293a;
+    --live:#4fd39b; --live-soft:#10281f;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0e1116; --surface:#161b22; --surface-2:#1c222b;
+  --ink:#e8ecf1; --ink-2:#aab4c0; --ink-3:#7d8794;
+  --line:#262d37;
+  --accent:#5cb3e6; --accent-2:#8fd0f5; --accent-soft:#13293a;
+  --live:#4fd39b; --live-soft:#10281f;
+}
+
+/* expose tokens to Tailwind utilities (bg-surface, text-ink, border-line, ...) */
+@theme inline{
+  --color-bg:var(--bg);
+  --color-surface:var(--surface);
+  --color-surface-2:var(--surface-2);
+  --color-ink:var(--ink);
+  --color-ink-2:var(--ink-2);
+  --color-ink-3:var(--ink-3);
+  --color-line:var(--line);
+  --color-accent:var(--accent);
+  --color-accent-2:var(--accent-2);
+  --color-accent-soft:var(--accent-soft);
+  --color-live:var(--live);
+  --color-live-soft:var(--live-soft);
+  --font-sans:var(--font-geist-sans);
+  --font-mono:var(--font-geist-mono);
+}
+
+html{scroll-behavior:smooth;scroll-padding-top:5rem}
+body{background:var(--bg);color:var(--ink)}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation-duration:.01ms !important;transition-duration:.01ms !important}
+}
+
+/* scroll reveal */
+.reveal{opacity:0;transform:translateY(14px)}
+.reveal.in{opacity:1;transform:none;transition:opacity .5s ease,transform .5s ease}
+@media (prefers-reduced-motion:reduce){.reveal,.reveal.in{opacity:1;transform:none}}
+
+/* subtle dot grid behind the hero - stops it reading as a default template */
+.hero-grid-bg::before{
+  content:"";
+  position:absolute; inset:0; z-index:-1;
+  background-image:radial-gradient(var(--line) 1px, transparent 1px);
+  background-size:22px 22px;
+  mask-image:radial-gradient(ellipse 70% 60% at 50% 0%, #000 40%, transparent 100%);
+  -webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 0%, #000 40%, transparent 100%);
+  opacity:.85; pointer-events:none;
+}
